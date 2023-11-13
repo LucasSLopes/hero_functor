@@ -50,7 +50,7 @@ end
 
 {Browse {AEqualB [1 0 0 1] [1 0 0 1]}}
 
-fun {Demux4 S X}
+fun {Demux S X}
    local X0 X1 X2 X3 Result
    in
       X0 = {AndG X {AndG {NotGate S.1|nil} {NotGate S.2.1|nil}}}
@@ -62,7 +62,7 @@ fun {Demux4 S X}
    end
 end   
 
-fun {Mux4 S X}
+fun {Mux S X}
    local S00 S01 S10 S11 Result
    in
       S00 =  {AndG X.2.2.2.1|nil {AndG {NotGate S.1|nil} {NotGate S.2.1|nil}}}
